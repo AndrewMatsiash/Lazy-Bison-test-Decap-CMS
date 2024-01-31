@@ -13,10 +13,3 @@ command = """\
 HUGO_VERSION = "0.121.0"
 DART_SASS_VERSION = "1.70.0"
 TZ = "America/Los_Angeles"
-
-
-# Site ID Configuration
-[build]
-  command = "netlify deploy"
-  functions = "netlify/functions/"
-  site = "7c670c65-ad59-41cc-b098-3159738f0049"
