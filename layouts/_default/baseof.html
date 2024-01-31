@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{ with hugo.IsProduction }}
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-5DPTBV6Q");
+  </script>
+  <!-- End Google Tag Manager -->
+  {{ end }}
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{{.Params.title }} {{ if not .IsHome }}| Lazy-Bison {{ end }}</title>
+
+  <meta name="description" content="{{ .Params.SEO.description }}">
+  <meta name="keywords" content="{{ .Params.SEO.keywords }}">
+  <meta name="author" content="{{ .Params.SEO.author }}">
+
+  <meta property="og:site_name" content="Lazy Bison">
+  <meta property="og:title" content="{{.Params.title }} {{ if not .IsHome }}| Lazy-Bison {{ end }}" />
+  <meta property="og:description" content="{{ .Params.SEO.description }}" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/logo_black.png" />
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="672">
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{.Params.title }} {{ if not .IsHome }}| Lazy-Bison {{ end }}" />
+  <meta name="twitter:description" content="{{ .Params.SEO.description }}" />
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/logo_black.png" />
+  <meta name="twitter:image:width" content="1200">
+  <meta name="twitter:image:height" content="672">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}favicons/favicon-16x16.png">
+  <link rel="manifest" href="{{ .Site.BaseURL }}favicons/site.webmanifest">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  {{ $opts := dict
+  "transpiler" "dartsass"
+  "targetPath" "css/style.css"
+  "vars" site.Params.styles
+}}
+  {{ with resources.Get "sass/main.scss" | toCSS $opts | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  {{ end }}
+</head>
+
+<body>
+  {{ with hugo.IsProduction }}
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src=" https://www.googletagmanager.com/ns.html?id=GTM-5DPTBV6Q" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  {{ end }}
+
+  {{ $urlParts :=  .Permalink }}
+  {{ $lastPart := path.BaseName $urlParts }}
+  {{ $fileName := path.Base .File.BaseFileName  }}
+  {{ $isPageBlog := and (eq .Type "blogs") (eq $lastPart "blogs") }}
+  {{ $isPageBlogCategory := strings.Contains .Permalink "blog_categories" }}
+  {{ $isPagePost := and (eq .Type "blogs") (strings.Contains .Permalink $fileName) }}
+  {{ $isPageCases := and (eq .Type "cases") (eq $lastPart "cases") }}
+  {{ $isPageCasesCategory :=  strings.Contains .Permalink "case_categories" }}
+  {{ $isPageCase := strings.Contains .Permalink (printf "/cases/%s" $fileName) }}
+  {{ $isLastPartBlogs := eq $lastPart "blogs" }}
+
+
+  {{ $wrapper_class := "" }}
+
+  {{ if $isPageCases  }}
+  {{ $wrapper_class = "cases-page__wrapper" }}
+  {{ else if  $isPageCasesCategory }}
+  {{ $wrapper_class = "cases-page__wrapper" }}
+  {{ else if $isPageCase }}
+  {{ $wrapper_class = "case-page__wrapper" }}
+  {{ else if $isPageBlog }}
+  {{ $wrapper_class = "blogs-page__wrapper" }}
+  {{ else if  $isPageBlogCategory }}
+  {{ $wrapper_class = "blogs-page__wrapper" }}
+  {{ else if $isPagePost }}
+  {{ $wrapper_class = "blog-page__wrapper" }}
+  {{ else }}
+  {{ $wrapper_class = "home-page__wrapper" }}
+  {{ end }}
+
+  {{ partial "header.html" . }}
+
+  <main>
+    <div class="wrapper {{ $wrapper_class }}">
+      {{ block "main" . }}
+
+      {{ end }}
+    </div>
+  </main>
+  {{ partial "footer.html" . }}
+  {{ partial "popup-get-consultation.html" . }}
+  <div class="overlay"></div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  {{ $js := resources.Get "js/main.js" | resources.Minify }}
+  <script src="{{ $js.Permalink }}"></script>
+</body>
+
+</html>

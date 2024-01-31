@@ -1,0 +1,79 @@
+baseURL = 'https://andrewmatsiash.github.io/Lazy-Bison-test-Decap-CMS/'
+languageCode = "en-us"
+
+[params]
+  blogs_paginate = 4
+  cases_paginate = 4
+  summaryLength = 50 
+
+[taxonomies]
+  blog_category = "blog_categories"
+  case_category = "case_categories"
+
+[[menu.main]]
+    identifier = "services"
+    name = "services"
+    url = "/#services"
+    weight = 1
+
+[[menu.main]]
+    identifier = "explore"
+    name = "explore"
+    url = "/#explore"
+    weight = 2
+
+[[menu.main]]
+    identifier = "blogs"
+    name = "blog"
+    url = "/blogs"
+    weight = 3
+
+[[menu.main]]
+    identifier = "cases"
+    name = "cases"
+    url = "/cases"
+    weight = 4
+
+[[menu.main]]
+    identifier = "testimonials"
+    name = "testimonials"
+    url = "/#testimonials"
+    weight = 5
+
+
+[related]
+  includeNewer = false
+  threshold = 80
+  toLower = false
+[[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'keywords'
+    pattern = ''
+    toLower = false
+    type = 'basic'
+    weight = 100
+[[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'date'
+    pattern = ''
+    toLower = false
+    type = 'basic'
+    weight = 10
+[[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'tags'
+    pattern = ''
+    toLower = false
+    type = 'basic'
+    weight = 80
+[[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'blog_categories'
+    pattern = ''
+    toLower = false
+    type = 'basic'
+    weight = 70
