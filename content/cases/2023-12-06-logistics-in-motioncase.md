@@ -1,12 +1,12 @@
 ---
 SEO:
-  description: A case study on overcoming logistics challenges in a European
+  description: A case study onсссс overcoming logistics challenges in a European
     trucking and transportation company.
   keywords: Logistics, Trucking, Transportation, Case Study, Europe, Web
     Application, Mobile Application
   author: Lazy Bison
-title: "аааLogistics in Motion: Overcoming Challenges and Achieving
-  Excellenceууааыыыыв"
+title: "аааLogistics in сMotion: Overcoming Challenges and Achieving
+  Excellenceууааыыыыввсыыыв"
 date: 2023-12-06T19:25:00
 image: /images/cases/logistics-in-motion-overcoming-challenges-and-achieving-excellence/hugo.png
 case_categories:
