@@ -5,8 +5,7 @@ SEO:
   keywords: Logistics, Trucking, Transportation, Case Study, Europe, Web
     Application, Mobile Application
   author: Lazy Bison
-title: "аааLogistics in сMotion: Overcoming Challenges and Achieving
-  Excellenceууааыыыыввсыыыв"
+title: "Logistics in сMotion: Overcoming Challenges and Achieving Excellence"
 date: 2023-12-06T19:25:00
 image: /images/cases/logistics-in-motion-overcoming-challenges-and-achieving-excellence/hugo.png
 case_categories:
