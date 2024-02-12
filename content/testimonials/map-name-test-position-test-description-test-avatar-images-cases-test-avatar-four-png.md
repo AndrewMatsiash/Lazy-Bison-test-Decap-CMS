@@ -1,6 +1,6 @@
 ---
 name: test
-avatar: /images/cases/test/avatar-one.png
+avatar: /images/cases/test/avatar-four.png
 position: test
 description: test
 ---
