@@ -71,12 +71,8 @@ gallery_images:
   - image_path: /images/frame-2.png
   - image_path: /images/frame-1.png
 ---
-\| Service | Web Application | Chatbot Integration |
-
-\| --- | --- | --- |
-
-\| User Experience Design | Developed an intuitive and engaging UI for the landing page. | Integrated a user-friendly chat interface. |
-
-\| Content Strategy | Implemented a content strategy that highlights key information effectively. | Programmed the chatbot to deliver relevant content based on user queries. |
-
-\| Technology Integration | Utilized Ruby on Rails and ReactJS for robust backend and frontend development. | Seamlessly integrated ChatGPT to enable intelligent and context-aware conversations. |
+| Service | Web Application | Chatbot Integration |
+| --- | --- | --- |
+| User Experience Design | Developed an intuitive and engaging UI for the landing page. | Integrated a user-friendly chat interface. |
+| Content Strategy | Implemented a content strategy that highlights key information effectively. | Programmed the chatbot to deliver relevant content based on user queries. |
+| Technology Integration | Utilized Ruby on Rails and ReactJS for robust backend and frontend development. | Seamlessly integrated ChatGPT to enable intelligent and context-aware conversations. |
