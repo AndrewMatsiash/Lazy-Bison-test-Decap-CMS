@@ -10,7 +10,7 @@ SEO:
 title: 'ChatGPT INT: Transforming Engagement with an Interactive Chatbot on an
   Informational Landing Page'
 date: 2024-02-04T13:06:00.000Z
-image: assets/images/case-preview-img.png
+image: /images/case-preview-img.png
 case_categories:
   - test
 project_info:
@@ -68,8 +68,8 @@ roadmap:
       - training for the client's team
       - and deployment.
 gallery_images:
-  - image_path: assets/images/frame-2.png
-  - image_path: assets/images/frame-1.png
+  - image_path: /images/frame-2.png
+  - image_path: /images/frame-1.png
 ---
 
 \| Service | Web Application | Chatbot Integration |
