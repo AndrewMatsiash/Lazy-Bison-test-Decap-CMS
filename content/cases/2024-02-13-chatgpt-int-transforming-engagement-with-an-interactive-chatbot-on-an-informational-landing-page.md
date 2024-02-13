@@ -7,8 +7,8 @@ SEO:
     Engagement, Conversion Rate Increase, Digital Innovation, Ruby on Rails,
     ReactJS
   author: test
-title: "ChatGPT INT: Transforming Engagement with an Interactive Chatbot on an
-  Informational Landing Page"
+title: 'ChatGPT INT: Transforming Engagement with an Interactive Chatbot on an
+  Informational Landing Page'
 date: 2024-02-04T13:06:00.000Z
 image: assets/images/case-preview-img.png
 case_categories:
@@ -20,23 +20,20 @@ project_info:
   location: United States
   industry: Digital Content & Marketing
   type: Web Development
-  engagement_model: " Agile Development"
-  duration: " 4 Months"
+  engagement_model: ' Agile Development'
+  duration: ' 4 Months'
   staff: 5 (Project Manager, 2 Developers, UX/UI Designer, QA Specialist)
   client_since: 2021
 challenge:
   subtitle: The client's landing page was not effectively engaging visitors,
     leading to lower brand awareness and product understanding.
   issue:
-    - street: test
-      city: test
-      post-code: test
-    - street: test
-      city: test
-      post-code: test
-    - street: test
-      city: test
-      post-code: test
+    - title: test
+      description: test
+    - title: test
+      description: test
+    - title: test
+      description: test
 value_driven_results:
   subtitle: The integration of a ChatGPT-powered chatbot on the client's landing
     page significantly enhanced user interaction, leading to increased
@@ -45,11 +42,11 @@ value_driven_results:
     user experience, making it more interactive and informative.
 tools_and_technologies:
   - tool: Back-End
-    technologies: " Ruby on Rails"
+    technologies: ' Ruby on Rails'
   - tool: Front-End
     technologies: ReactJS, HTML5, CSS3
   - tool: Wireframes & Mockups
-    technologies: " Adobe XD, Sketch"
+    technologies: ' Adobe XD, Sketch'
   - tool: Project Tools
     technologies: JIRA, Git
   - tool: Roadmap Tool
@@ -74,6 +71,7 @@ gallery_images:
   - image_path: assets/images/frame-2.png
   - image_path: assets/images/frame-1.png
 ---
+
 \| Service | Web Application | Chatbot Integration |
 
 \| --- | --- | --- |
