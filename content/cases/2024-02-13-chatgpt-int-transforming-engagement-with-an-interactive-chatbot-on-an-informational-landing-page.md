@@ -7,8 +7,8 @@ SEO:
     Engagement, Conversion Rate Increase, Digital Innovation, Ruby on Rails,
     ReactJS
   author: test
-title: 'ChatGPT INT: Transforming Engagement with an Interactive Chatbot on an
-  Informational Landing Page'
+title: "ChatGPT INT: Transforming Engagement with an Interactive Chatbot on an
+  Informational Landing Page"
 date: 2024-02-04T13:06:00.000Z
 image: /images/case-preview-img.png
 case_categories:
@@ -20,8 +20,8 @@ project_info:
   location: United States
   industry: Digital Content & Marketing
   type: Web Development
-  engagement_model: ' Agile Development'
-  duration: ' 4 Months'
+  engagement_model: " Agile Development"
+  duration: " 4 Months"
   staff: 5 (Project Manager, 2 Developers, UX/UI Designer, QA Specialist)
   client_since: 2021
 challenge:
@@ -42,11 +42,11 @@ value_driven_results:
     user experience, making it more interactive and informative.
 tools_and_technologies:
   - tool: Back-End
-    technologies: ' Ruby on Rails'
+    technologies: " Ruby on Rails"
   - tool: Front-End
     technologies: ReactJS, HTML5, CSS3
   - tool: Wireframes & Mockups
-    technologies: ' Adobe XD, Sketch'
+    technologies: " Adobe XD, Sketch"
   - tool: Project Tools
     technologies: JIRA, Git
   - tool: Roadmap Tool
@@ -71,13 +71,8 @@ gallery_images:
   - image_path: /images/frame-2.png
   - image_path: /images/frame-1.png
 ---
-
-\| Service | Web Application | Chatbot Integration |
-
-\| --- | --- | --- |
-
-\| User Experience Design | Developed an intuitive and engaging UI for the landing page. | Integrated a user-friendly chat interface. |
-
-\| Content Strategy | Implemented a content strategy that highlights key information effectively. | Programmed the chatbot to deliver relevant content based on user queries. |
-
-\| Technology Integration | Utilized Ruby on Rails and ReactJS for robust backend and frontend development. | Seamlessly integrated ChatGPT to enable intelligent and context-aware conversations. |
+| Service | Web Application | Chatbot Integration |
+| --- | --- | --- |
+| User Experience Design | Developed an intuitive and engaging UI for the landing page. | Integrated a user-friendly chat interface. |
+| Content Strategy | Implemented a content strategy that highlights key information effectively. | Programmed the chatbot to deliver relevant content based on user queries. |
+| Technology Integration | Utilized Ruby on Rails and ReactJS for robust backend and frontend development. | Seamlessly integrated ChatGPT to enable intelligent and context-aware conversations. |
