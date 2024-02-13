@@ -1,6 +1,6 @@
 ---
 title: 'Logistics in Motion: Overcoming Challenges and Achieving Excellence'
-image: /images/case-preview-img.png
+image: /images/case-preview-img-two.png
 case_categories: ['logistic']
 date: 2023-12-06T19:25:00
 SEO:
