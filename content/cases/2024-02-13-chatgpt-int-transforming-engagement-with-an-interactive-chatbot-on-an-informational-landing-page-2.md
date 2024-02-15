@@ -57,8 +57,9 @@ tools_and_technologies:
 roadmap:
   - date: Month 1
     activities:
-      - Conducted a comprehensive analysis of the client's needs and developed a
-        project plan.
+      - active1
+      - active2
+      - active3
   - date: Month 2
     activities:
       - Completed the design and development of the landing page's new UI.
