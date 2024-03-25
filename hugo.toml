@@ -1,10 +1,17 @@
-baseURL = 'https://andrewmatsiash.github.io/'
+baseURL = "https://thelazybison.com/"
 languageCode = "en-us"
 
 [params]
   blogs_paginate = 4
   cases_paginate = 4
-  summaryLength = 50 
+  summaryLength = 50
+  description = 'Specializing in Ruby on Rails development, The Lazy Bison offers fast, reliable, and scalable solutions for start-ups and SMEs in various industries.'
+  keywords = 'Ruby on Rails, Hotwire, ReactJS, Development, Start-ups, SMEs, Legal services, eCommerce, Healthcare, Real Estate, Fintech, Veterinary, Crowdfunding'
+  author = 'Lazy Bison'
+
+[permalinks]
+  case_categories = "/cases/:slug"
+  blog_categories = "/blog/:slug"
 
 [taxonomies]
   blog_category = "blog_categories"
@@ -23,9 +30,9 @@ languageCode = "en-us"
     weight = 2
 
 [[menu.main]]
-    identifier = "blogs"
+    identifier = "blog"
     name = "blog"
-    url = "/blogs"
+    url = "/blog"
     weight = 3
 
 [[menu.main]]
@@ -42,7 +49,7 @@ languageCode = "en-us"
 
 
 [related]
-  includeNewer = false
+  includeNewer = true
   threshold = 80
   toLower = false
 [[related.indices]]
@@ -61,14 +68,6 @@ languageCode = "en-us"
     toLower = false
     type = 'basic'
     weight = 10
-[[related.indices]]
-    applyFilter = false
-    cardinalityThreshold = 0
-    name = 'tags'
-    pattern = ''
-    toLower = false
-    type = 'basic'
-    weight = 80
 [[related.indices]]
     applyFilter = false
     cardinalityThreshold = 0

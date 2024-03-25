@@ -19,7 +19,6 @@
               <span class="category category--active">#{{ . }}</span>
             </li>
             {{ end }}
-            </li>
           </ul>
           <h1 class="case-study-page__title-h1">{{.Params.title}}
           </h1>
@@ -121,16 +120,16 @@
           <i class="icon spin-text-circle__text"></i>
           <i class="icon spin-text-circle__circle spin-text-circle__circle--gradient-blue-two"></i>
         </div>
-        {{ $logisticsImprovements := .Params.value_driven_results.logisticsImprovements }}
-        {{ $logisticsImprovementsLength := $logisticsImprovements | len }}
-        {{ $halfLength := div $logisticsImprovementsLength 2 }}
+        {{ $results := .Params.value_driven_results.results }}
+        {{ $resultsLength := $results | len }}
+        {{ $halfLength := div $resultsLength 2 }}
         {{ $firstLength := $halfLength }}
         {{ $lastLength := $halfLength }}
-        {{ if ne (mod $logisticsImprovementsLength 2) 0 }}
+        {{ if ne (mod $resultsLength 2) 0 }}
         {{ $firstLength = add $firstLength 1 }}
         {{ end }}
         <ul class="value-driven-list">
-          {{ range $logisticsImprovements | first $firstLength }}
+          {{ range $results | first $firstLength }}
           <li class="value-driven-item">
             <i class="icon arrow-right-down-angle-square"></i>
             <p class="value-driven-item__text">{{.description}}</p>
@@ -138,7 +137,7 @@
           {{ end }}
         </ul>
         <ul class="value-driven-list">
-          {{ range $logisticsImprovements | last $lastLength }}
+          {{ range $results | last $lastLength }}
           <li class="value-driven-item">
             <i class="icon arrow-right-down-angle-square"></i>
             <p class="value-driven-item__text">{{.description}}</p>
@@ -206,12 +205,12 @@
                 {{ end }}
               </ul>
             </div>
-            {{ if ne $index (sub (len $.Params.roadmap) 1) }}
+          </li>
+          {{ if ne $index (sub (len $.Params.roadmap) 1) }}
           <li class="roadmap-item">
             <i class="icon icon-arrow-roadmap"></i>
           </li>
           {{ end }}
-          </li>
           {{ end }}
         </ul>
       </div>
@@ -226,7 +225,7 @@
             {{ range .Params.gallery_images }}
             <li class="swiper-slide">
               <div class="swiper-slide__img-container">
-                {{ $image := resources.Get .image_path }}
+                {{ $image := resources.Get .image_path  }}
                 {{ $WEBPImage := $image.Process "q100 webp" }}
                 <img loading="lazy" src="{{ $WEBPImage.RelPermalink }}" alt="image project">
               </div>

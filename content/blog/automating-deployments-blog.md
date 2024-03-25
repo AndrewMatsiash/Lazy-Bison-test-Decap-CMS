@@ -1,5 +1,4 @@
 ---
-layout: blog
 title: Automating Deployments with Kamal and GitHub Actions
 author: Yahor Bukhta
 avatar:
@@ -18,7 +17,7 @@ Learn how to automate your web app deployments using Kamal and GitHub Actions. T
 
 ## Detailed Guide to Installing Kamal
 
-For a more in-depth look at installation and configuration, check out this [detailed post]({{< relref "blogs/effortless-deployment-blog" >}}).
+For a more in-depth look at installation and configuration, check out this [detailed post]({{< relref "blog/effortless-deployment-blog" >}}).
 
 ### Easy Steps to Install Kamal
 

@@ -1,0 +1,83 @@
+{{ define "main" }}
+<section class="section-full-info-post">
+  <div class="container">
+    <div class="section-full-info-blog__inner">
+      <div class="container__navigation-path">
+        <nav class="navigation-path">
+          <a class="navigation-path__link" href="{{ .Site.BaseURL }}">Home</a>
+          <span>/</span>
+          <a class="navigation-path__link" href="/blog">Blog</a>
+          <span>/</span>
+          <a class="navigation-path__link navigation-path__link--active" href="{{ .Permalink }}">{{.Params.title}}</a>
+        </nav>
+      </div>
+      <article class="full-info-post">
+        <header class="full-info__header">
+          <h1 class="post-page__title-h1">{{.Params.title}}</h1>
+          <div class="author-time-post">
+            <div class="author">
+              {{ $imageAvatar := resources.Get .Params.avatar }}
+              {{ with $imageAvatar }}
+              {{ $imageAvatarWebp := $imageAvatar.Resize "20x20 q100 webp" }}
+              <picture class="author__avatar">
+                <source type="image/webp" srcset="{{ $imageAvatarWebp.RelPermalink }}" />
+                <img src="{{ $imageAvatar.RelPermalink }}" alt="author" />
+              </picture>
+              {{ end }}
+              <p class="author__name">{{.Params.author}}</p>
+            </div>
+            <span>|</span>
+            <div class="time">
+              {{.Params.date | time.Format ":date_medium" }}
+            </div>
+          </div>
+          <ul class="categories-list">
+            {{ range .Params.blog_categories }}
+            <li class="categories-item">
+              <span class="category category--active">#{{ . }}</span>
+            </li>
+            {{ end }}
+          </ul>
+          {{ $image := resources.Get .Params.image }}
+          {{ if $image }}
+          {{ $smallImage := $image.Resize "425x q100 webp" }}
+          {{ $mediumImage := $image.Resize "768x q100 webp" }}
+          {{ $largeImage := $image.Resize "1440x q100 webp" }}
+          <picture>
+            <source type="image/webp" media="(max-width:425px)" srcset="{{$smallImage.RelPermalink}}">
+            <source type="image/webp" media="(max-width:768px)" srcset="{{$mediumImage.RelPermalink}}">
+            <source type="image/webp" media="(max-width:1440px)" srcset="{{$largeImage.RelPermalink}}">
+            <img class="post-post-image" src="{{ $image.RelPermalink }}" alt="post Image">
+          </picture>
+          {{ end }}
+        </header>
+        <section class="full-info-blog__section">{{ .Content }}</section>
+      </article>
+    </div>
+  </div>
+</section>
+{{ $currentBlog := . }} 
+{{ $excludedTitle := .Params.title }} 
+{{ $related := .Site.RegularPages.Related $currentBlog | first 3 }} 
+{{$relatedBlog := where $related "Type" "blog"}}
+{{ if gt (len $relatedBlog) 0}}
+<div class="container">
+  <div class="gray-line__container">
+    <hr class="gray-line" />
+  </div>
+</div>
+<section class="section-recommendations">
+  <div class="container">
+    <div class="section-recommendations__inner">
+      <h2 class="post-page__title-h2">Recommendations</h2>
+      <ul class="blog-list">
+      {{ range $relatedBlog}}
+            {{ if ne .Title $excludedTitle }}
+              <li class="blog-item">{{ partial "blog-card.html" . }}</li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+{{ end }} {{ end }}

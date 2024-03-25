@@ -8,13 +8,12 @@
 
 html,
 body {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
 	height: 100%;
 }
 
 html {
-	font-size: $root-font-size;
-	scroll-behavior: smooth;
-
 	@media (max-width: $breakpoint-xl) {
 		font-size: 1.111vw;
 	}
